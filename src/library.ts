@@ -1,6 +1,12 @@
 import assert from "assert";
 import { API_URL } from "./constants";
 
+const handleStatusCode = async (response: Response) => {
+  if (response.ok) return;
+  const body = await response.text();
+  throw new Error(`HTTP error! Status: ${response.status}. Body: ${body}`);
+};
+
 const login = async (username: string, password: string) => {
   const resource = API_URL + "/App/api/Logon";
   const body = {
@@ -19,6 +25,7 @@ const login = async (username: string, password: string) => {
     body: JSON.stringify(body),
   };
   const response = await fetch(resource, options);
+  await handleStatusCode(response);
   const data = await response.json();
   return data;
 };
