@@ -8,7 +8,8 @@
     "build": "tsc",
     "lint": "prettier --check src *.md",
     "format": "prettier --write src *.md",
-    "library": "ts-node src/library.ts"
+    "library": "ts-node src/library.ts",
+    "library:debug": "node --inspect --require ts-node/register src/library.ts"
   },
   "repository": {
     "type": "git",
