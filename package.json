@@ -4,7 +4,8 @@
   "description": "Unofficial Laboral Kutxa JS library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "library": "ts-node src/library.ts"
   },
   "repository": {
     "type": "git",
