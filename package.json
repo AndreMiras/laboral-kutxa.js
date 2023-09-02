@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "lint": "prettier --check src *.md",
-    "format": "prettier --write src *.md",
+    "lint": "prettier --check '{src,.github}/**/*.{ts,yml}' *.md",
+    "format": "prettier --write '{src,.github}/**/*.{ts,yml}' *.md",
     "library": "ts-node src/library.ts",
     "library:debug": "node --inspect --require ts-node/register src/library.ts"
   },
