@@ -1,6 +1,6 @@
 {
   "name": "laboral-kutxa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial Laboral Kutxa JS library",
   "main": "index.js",
   "scripts": {
