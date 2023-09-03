@@ -31,6 +31,8 @@ interface Aviso {
   fechaAlta: string;
   accion: string;
   tipo: string;
+  // we don't know what this one looks like yet
+  informacionAviso: any;
 }
 
 interface Importe {

@@ -3,7 +3,7 @@
  * vs actual backend response data.
  * It also gives more concret examples of backend responses.
  */
-import { LoginResponse, Aviso } from "./types";
+import { LoginResponse, Aviso, Importes } from "./types";
 
 const loginResponse: LoginResponse = {
   apellido1: "APELLIDO1",
@@ -53,3 +53,86 @@ const aviso2: Aviso = {
 };
 
 const avisos: Aviso[] = [aviso1, aviso2];
+
+const importes: Importes = {
+  _MisAhorros: {
+    cantidad: 1234.56,
+    moneda: "EUR",
+  },
+  _MisAhorrosParticular: {
+    cantidad: 4665.76,
+    moneda: "EUR",
+  },
+  _MisAhorrosNegocio: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _CuentasCorrientes: {
+    cantidad: 1234.56,
+    moneda: "EUR",
+  },
+  _CuentasCorrientesParticular: {
+    cantidad: 1234.56,
+    moneda: "EUR",
+  },
+  _CuentasCorrientesNegocio: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _CuentasAhorro: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _CuentasAhorroParticular: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _CuentasAhorroNegocio: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _Depositos: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _Fondos: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _Bolsa: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _AportacionesLK: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _Planes: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _Financiacion: {
+    cantidad: 123456.78,
+    moneda: "EUR",
+  },
+  _FinanciacionParticular: {
+    cantidad: 123456.78,
+    moneda: "EUR",
+  },
+  _FinanciacionNegocio: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _RemesasImportacion: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _RemesasExportacion: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+  _DispuestoTarjetas: {
+    cantidad: 0,
+    moneda: "EUR",
+  },
+};
