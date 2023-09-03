@@ -5,6 +5,12 @@
 
 Unofficial Laboral Kutxa JS library
 
+## Install
+
+```sh
+npm install laboral-kutxa
+```
+
 ## Usage
 
 Reading through the `misProductos` list:
