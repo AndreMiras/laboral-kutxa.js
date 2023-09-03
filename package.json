@@ -2,7 +2,8 @@
   "name": "laboral-kutxa",
   "version": "1.0.1",
   "description": "Unofficial Laboral Kutxa JS library",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
@@ -11,6 +12,9 @@
     "library": "ts-node src/library.ts",
     "library:debug": "node --inspect --require ts-node/register src/library.ts"
   },
+  "files": [
+    "/dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AndreMiras/laboral-kutxa.js.git"
