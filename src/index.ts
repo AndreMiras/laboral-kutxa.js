@@ -1,7 +1,7 @@
 export {
   LoginResponse,
   Product,
-  Avisos,
+  Aviso,
   Importe,
   Importes,
   MyProductsResponse,

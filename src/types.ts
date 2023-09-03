@@ -21,7 +21,7 @@ interface Product {
   alias: string;
 }
 
-interface Avisos {
+interface Aviso {
   id: string;
   severidad: string;
   orden: number;
@@ -62,7 +62,7 @@ interface Importes {
 }
 
 interface MyProductsResponse {
-  avisos: Avisos[];
+  avisos: Aviso[];
   mensaje: string;
   misProductos: Product[];
   numeroOperacionesPendientesFirma: number;
@@ -74,7 +74,7 @@ interface MyProductsResponse {
 export type {
   LoginResponse,
   Product,
-  Avisos,
+  Aviso,
   Importe,
   Importes,
   MyProductsResponse,
