@@ -3,7 +3,15 @@
  * vs actual backend response data.
  * It also gives more concret examples of backend responses.
  */
-import { LoginResponse, Aviso, Importes } from "./types";
+import {
+  LoginResponse,
+  Aviso,
+  Amounts,
+  CurrentAccountProduct,
+  PaymentCardProduct,
+  LoanProduct,
+  Product,
+} from "./types";
 
 const loginResponse: LoginResponse = {
   apellido1: "APELLIDO1",
@@ -54,13 +62,13 @@ const aviso2: Aviso = {
 
 const avisos: Aviso[] = [aviso1, aviso2];
 
-const importes: Importes = {
+const importes: Amounts = {
   _MisAhorros: {
     cantidad: 1234.56,
     moneda: "EUR",
   },
   _MisAhorrosParticular: {
-    cantidad: 4665.76,
+    cantidad: 1234.56,
     moneda: "EUR",
   },
   _MisAhorrosNegocio: {
@@ -136,3 +144,280 @@ const importes: Importes = {
     moneda: "EUR",
   },
 };
+
+const currentAccountProduct: CurrentAccountProduct = {
+  familia: "001",
+  numeroCorto: "0123456789",
+  categoriaC14D: {
+    grupo: "1",
+    subgrupo: "1",
+    orden: "01",
+  },
+  esMancomunada: false,
+  esProductoParticular: true,
+  origen: "",
+  importeASumar: {
+    cantidad: 1234.56,
+    moneda: "EUR",
+  },
+  visible: true,
+  id: "0",
+  grupo: "cuentasCorrientes",
+  alias: "CUENTA 0,0",
+  nombreProducto: "CUENTA 0,0",
+  aliasEditable: true,
+  categoriaId: "1",
+  numero: "ES9130350175800123456789",
+  desactivada: false,
+  saldo: {
+    cantidad: 1234.56,
+    moneda: "EUR",
+  },
+  titularidadId: "titular",
+  producto: "CCP",
+  esDeCredito: false,
+  disponible: {
+    cantidad: 1234.56,
+    moneda: "EUR",
+  },
+  actualizandoSaldo: false,
+  avisos: [aviso1],
+  esCuentaDomiciliacionTarjeta: true,
+  esCuentaDomiciliacionTarjetaCredito: false,
+  entidad: {
+    id: "PRV72400003035",
+    iconoUrl: "https://lkweb.laboralkutxa.com/entidades/PRV72400003035-65.png",
+    esPrincipal: false,
+  },
+  esDeCarteraAsesorada: false,
+  permisos: [
+    {
+      nombre: "verMovimientos",
+    },
+    {
+      nombre: "verDetalle",
+    },
+    {
+      nombre: "domiciliarServicioAlertas",
+    },
+    {
+      nombre: "transferenciaBizum",
+    },
+    {
+      nombre: "traspasoDestino",
+    },
+    {
+      nombre: "traspasoOrigen",
+    },
+    {
+      nombre: "transferencia",
+    },
+    {
+      nombre: "halCash",
+    },
+    {
+      nombre: "traspasoOrigenAhorroClick",
+    },
+    {
+      nombre: "domiciliarTarjeta",
+    },
+    {
+      nombre: "domiciliarPrestamo",
+    },
+    {
+      nombre: "domiciliarSeguro",
+    },
+    {
+      nombre: "domiciliarRecibo",
+    },
+    {
+      nombre: "operarRecibo",
+    },
+    {
+      nombre: "operarDepositos",
+    },
+    {
+      nombre: "aportarPlan",
+    },
+    {
+      nombre: "reembolsarFondo",
+    },
+    {
+      nombre: "subscribirFondos",
+    },
+    {
+      nombre: "solicitarCheques",
+    },
+    {
+      nombre: "contratarGDC",
+    },
+    {
+      nombre: "verOrdenesPendientesCobro",
+    },
+  ],
+  esCuentaMultiseguros: false,
+};
+
+const paymentCardProduct: PaymentCardProduct = {
+  familia: "009",
+  numeroCorto: "123456******1234",
+  categoriaC14D: {
+    grupo: "2",
+    subgrupo: "1",
+    orden: "01",
+  },
+  esProductoParticular: true,
+  ordenTarjeta: 10,
+  origen: "",
+  importeASumar: {
+    cantidad: 123.45,
+    moneda: "EUR",
+  },
+  visible: true,
+  id: "2",
+  grupo: "tarjetas",
+  alias: "VISA ELECTRÓN",
+  nombreProducto: "VISA ELECTRÓN",
+  aliasEditable: false,
+  categoriaId: "6",
+  numero: "123456******1234",
+  desactivada: false,
+  titularidadId: "titular",
+  producto: "ELE",
+  disponible: {
+    cantidad: 1234.56,
+    moneda: "EUR",
+  },
+  imagen: "electron.png",
+  numeroBeneficiarios: 0,
+  nombreBeneficiario: "",
+  tipo: "debito",
+  actualizandoSaldo: false,
+  tieneSticker: false,
+  estaCaducada: false,
+  estaReemitida: false,
+  esMorosa: false,
+  estado: "encendida",
+  gastado: {
+    cantidad: 123.45,
+    moneda: "EUR",
+  },
+  avisos: [aviso2],
+  validaFirmaOtpReforzada: true,
+  tieneApplePay: false,
+  tienePagoMovil: true,
+  entidad: {
+    id: "PRV72400003035",
+    iconoUrl: "https://lkweb.laboralkutxa.com/entidades/PRV72400003035-65.png",
+    esPrincipal: false,
+  },
+  esDeCarteraAsesorada: false,
+  permisos: [
+    {
+      nombre: "opcionVerPin",
+    },
+    {
+      nombre: "verPin",
+    },
+    {
+      nombre: "gestionarEstado",
+    },
+    {
+      nombre: "cambiarEstado",
+    },
+    {
+      nombre: "verNumeroCompleto",
+    },
+    {
+      nombre: "bloquearTarjeta",
+    },
+    {
+      nombre: "compraElectronicaSegura",
+    },
+    {
+      nombre: "recargaDeMovil",
+    },
+    {
+      nombre: "consultarEstado",
+    },
+    {
+      nombre: "verMovimientos",
+    },
+  ],
+  esCuentaMultiseguros: false,
+};
+
+const loanProduct: LoanProduct = {
+  familia: "008",
+  numeroCorto: "0123456789",
+  categoriaC14D: {
+    grupo: "4",
+    subgrupo: "1",
+    orden: "07",
+  },
+  esProductoParticular: true,
+  esCuentaCreditoPagoAplazado: false,
+  origen: "",
+  importeASumar: {
+    cantidad: 123456.78,
+    moneda: "EUR",
+  },
+  visible: true,
+  id: "1",
+  grupo: "prestamos",
+  alias: "PRESTAMO",
+  nombreProducto: "PRESTAMO",
+  aliasEditable: true,
+  categoriaId: "31",
+  numero: "0123456789",
+  titularidadId: "titular",
+  producto: "PTM",
+  actualizandoSaldo: false,
+  pendiente: {
+    cantidad: 123456.78,
+    moneda: "EUR",
+  },
+  proximaCuota: {
+    cantidad: 987.65,
+    moneda: "EUR",
+  },
+  fecha: "2023-09-10T22:00:00Z",
+  estaExcedido: false,
+  tipoPrestamo: "pgh",
+  entidad: {
+    id: "PRV72400003035",
+    iconoUrl: "https://lkweb.laboralkutxa.com/entidades/PRV72400003035-65.png",
+    esPrincipal: false,
+  },
+  esDeCarteraAsesorada: false,
+  permisos: [
+    {
+      nombre: "amortizar",
+    },
+    {
+      nombre: "simularAmortizacion",
+    },
+    {
+      nombre: "verAvanceInformacionFiscal",
+    },
+    {
+      nombre: "verDetallePrestamo",
+    },
+    {
+      nombre: "verPagosRealizados",
+    },
+    {
+      nombre: "verProximasCuotas",
+    },
+    {
+      nombre: "verPagosRealizados",
+    },
+  ],
+  esCuentaMultiseguros: false,
+};
+
+const products: Product[] = [
+  currentAccountProduct,
+  paymentCardProduct,
+  loanProduct,
+];

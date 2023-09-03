@@ -1,9 +1,16 @@
 export {
   LoginResponse,
+  CategoriaC14D,
+  Permiso,
+  Entidad,
+  BaseProduct,
+  CurrentAccountProduct,
+  PaymentCardProduct,
+  LoanProduct,
   Product,
   Aviso,
-  Importe,
-  Importes,
+  Amount,
+  Amounts,
   MyProductsResponse,
 } from "./types";
 export { login, getMyProducts } from "./library";
