@@ -1,4 +1,5 @@
 import assert from "assert";
+import fetch, { Response } from "node-fetch";
 import { API_URL } from "./constants";
 import { LoginResponse, MyProductsResponse, Product } from "./types";
 
