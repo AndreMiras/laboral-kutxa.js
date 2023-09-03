@@ -11,6 +11,7 @@ import {
   PaymentCardProduct,
   LoanProduct,
   Product,
+  MyProductsResponse,
 } from "./types";
 
 const loginResponse: LoginResponse = {
@@ -416,8 +417,19 @@ const loanProduct: LoanProduct = {
   esCuentaMultiseguros: false,
 };
 
-const products: Product[] = [
+const myProducts: Product[] = [
   currentAccountProduct,
   paymentCardProduct,
   loanProduct,
 ];
+
+const products: MyProductsResponse = {
+  numeroOperacionesPendientesFirma: 0,
+  _Importes: importes,
+  misProductos: myProducts,
+  seguros: ["seguro-hogar", "seguro-hogar", "seguro-vida"],
+  productosDeOtros: [],
+  avisos: avisos,
+  resultado: 0,
+  mensaje: "",
+};

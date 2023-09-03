@@ -148,9 +148,11 @@ interface MyProductsResponse {
   mensaje: string;
   misProductos: Product[];
   numeroOperacionesPendientesFirma: number;
+  // we don't know what this one looks like yet
+  productosDeOtros: any;
   resultado: number;
   seguros: string[];
-  importes: Amounts;
+  _Importes: Amounts;
 }
 
 export type {

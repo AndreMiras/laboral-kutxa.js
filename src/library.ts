@@ -63,10 +63,12 @@ const main = async () => {
   assert.ok(USERNAME);
   assert.ok(PASSWORD);
   const loginResponse = await login(USERNAME, PASSWORD);
-  console.log({ loginResponse });
   const { token } = loginResponse;
   const products = await getMyProducts(token);
   showProducts(products);
+  const { _CuentasCorrientes: currentAccount, _Financiacion: financing } =
+    products._Importes;
+  console.log({ currentAccount, financing });
 };
 
 if (require?.main === module) {
