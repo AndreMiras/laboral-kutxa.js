@@ -21,8 +21,25 @@ interface Product {
   alias: string;
 }
 
-interface MyProductsResponse {
-  misProductos: Product[];
+interface Avisos {
+  id: string;
+  severidad: string;
+  orden: number;
+  mensaje: string;
+  tieneDetalle: boolean;
+  noMostrar: boolean;
+  fechaAlta: string;
+  accion: string;
+  tipo: string;
 }
 
-export type { LoginResponse, Product, MyProductsResponse };
+interface MyProductsResponse {
+  avisos: Avisos[];
+  mensaje: string;
+  misProductos: Product[];
+  numeroOperacionesPendientesFirma: number;
+  resultado: number;
+  seguros: string[];
+}
+
+export type { LoginResponse, Product, Avisos, MyProductsResponse };
