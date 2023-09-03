@@ -7,6 +7,8 @@ Unofficial Laboral Kutxa JS library
 
 ## Usage
 
+Reading through the `misProductos` list:
+
 ```js
 import { login, getMyProducts } from "laboral-kutxa";
 
@@ -26,4 +28,22 @@ Output:
   { alias: "VISA ELECTRÓN", grupo: "tarjetas" },
   { alias: "PRESTAMO", grupo: "prestamos" },
 ];
+```
+
+Accessing the aggregated amounts per account types:
+
+```js
+const products = await getMyProducts(token);
+const { _CuentasCorrientes: currentAccount, _Financiacion: financing } =
+  products._Importes;
+console.log({ currentAccount, financing });
+```
+
+Output:
+
+```js
+{
+  currentAccount: { cantidad: 1234.56, moneda: 'EUR' },
+  financing: { cantidad: 123456.78, moneda: 'EUR' }
+}
 ```

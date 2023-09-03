@@ -33,6 +33,34 @@ interface Avisos {
   tipo: string;
 }
 
+interface Importe {
+  cantidad: number;
+  moneda: string;
+}
+
+interface Importes {
+  _MisAhorros: Importe;
+  _MisAhorrosParticular: Importe;
+  _MisAhorrosNegocio: Importe;
+  _CuentasCorrientes: Importe;
+  _CuentasCorrientesParticular: Importe;
+  _CuentasCorrientesNegocio: Importe;
+  _CuentasAhorro: Importe;
+  _CuentasAhorroParticular: Importe;
+  _CuentasAhorroNegocio: Importe;
+  _Depositos: Importe;
+  _Fondos: Importe;
+  _Bolsa: Importe;
+  _AportacionesLK: Importe;
+  _Planes: Importe;
+  _Financiacion: Importe;
+  _FinanciacionParticular: Importe;
+  _FinanciacionNegocio: Importe;
+  _RemesasImportacion: Importe;
+  _RemesasExportacion: Importe;
+  _DispuestoTarjetas: Importe;
+}
+
 interface MyProductsResponse {
   avisos: Avisos[];
   mensaje: string;
@@ -40,6 +68,14 @@ interface MyProductsResponse {
   numeroOperacionesPendientesFirma: number;
   resultado: number;
   seguros: string[];
+  importes: Importes;
 }
 
-export type { LoginResponse, Product, Avisos, MyProductsResponse };
+export type {
+  LoginResponse,
+  Product,
+  Avisos,
+  Importe,
+  Importes,
+  MyProductsResponse,
+};
