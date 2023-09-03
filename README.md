@@ -1,6 +1,7 @@
 # laboral-kutxa.js
 
 [![Tests](https://github.com/AndreMiras/laboral-kutxa.js/workflows/Tests/badge.svg)](https://github.com/AndreMiras/laboral-kutxa.js/actions/workflows/tests.yml)
+[![Documentation](https://github.com/AndreMiras/laboral-kutxa.js/workflows/Documentation/badge.svg)](https://github.com/AndreMiras/laboral-kutxa.js/actions/workflows/documentation.yml)
 [![npm version](https://badge.fury.io/js/laboral-kutxa.svg)](https://badge.fury.io/js/laboral-kutxa)
 
 Unofficial Laboral Kutxa JS library
