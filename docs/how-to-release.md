@@ -10,10 +10,11 @@ VERSION=major.minor.patch
 
 ## Update package.json and tag
 
-Update the [package.json](../package.json) `version` to match the new release version.
+Update the [package.json](../package.json) and `package-lock.json` `version` to match the new release version.
 
 ```sh
 sed --regexp-extended 's/"version": "(.+)"/"version": "'$VERSION'"/' --in-place package.json
+npm install
 ```
 
 Then commit and tag:
