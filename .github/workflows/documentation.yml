@@ -20,6 +20,7 @@ jobs:
       - run: npm run typedoc
       - name: deploy documentation
         run: |
+          mv _docs/ /tmp/docs
           git ls-remote --exit-code . origin/gh-pages \
             && git checkout -b gh-pages \
             || git checkout --orphan gh-pages

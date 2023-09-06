@@ -12,7 +12,7 @@
     "format": "prettier --write '{src,.github}/**/*.{ts,yml}' *.md",
     "library": "ts-node src/library.ts",
     "library:debug": "node --inspect --require ts-node/register src/library.ts",
-    "typedoc": "typedoc src/index.ts --out /tmp/docs"
+    "typedoc": "typedoc src/index.ts"
   },
   "files": [
     "dist/**/*.js",
@@ -27,7 +27,13 @@
   "bugs": {
     "url": "https://github.com/AndreMiras/laboral-kutxa.js/issues"
   },
-  "homepage": "https://github.com/AndreMiras/laboral-kutxa.js#readme",
+  "homepage": "https://andremiras.github.io/laboral-kutxa.js",
+  "typedocOptions": {
+    "out": "_docs/",
+    "navigationLinks": {
+      "GitHub": "https://github.com/AndreMiras/laboral-kutxa.js"
+    }
+  },
   "devDependencies": {
     "@types/chai": "^4.3.5",
     "@types/chai-as-promised": "^7.1.5",
