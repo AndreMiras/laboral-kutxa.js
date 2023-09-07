@@ -62,17 +62,18 @@ const main = async () => {
   const { USERNAME, PASSWORD } = process.env;
   assert.ok(USERNAME);
   assert.ok(PASSWORD);
-  const loginResponse = await login(USERNAME, PASSWORD);
+  const loginResponse = await exports.login(USERNAME, PASSWORD);
   const { token } = loginResponse;
-  const products = await getMyProducts(token);
+  const products = await exports.getMyProducts(token);
   showProducts(products);
   const { _CuentasCorrientes: currentAccount, _Financiacion: financing } =
     products._Importes;
   console.log({ currentAccount, financing });
 };
 
-if (require?.main === module) {
-  main();
-}
+const mainIsModule = (module: any, main: NodeModule) => main === module;
 
-export { login, getMyProducts };
+/* istanbul ignore next */
+mainIsModule(require.main, module) && main();
+
+export { login, getMyProducts, main };
