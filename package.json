@@ -7,6 +7,7 @@
   "scripts": {
     "test": "mocha -r ts-node/register src/*.test.ts",
     "test:debug": "node --inspect-brk ./node_modules/.bin/mocha -r ts-node/register src/*.test.ts",
+    "test:coverage": "nyc mocha -r ts-node/register -r jsdom-global/register src/*.test.ts",
     "build": "tsc",
     "lint": "prettier --check '{src,.github}/**/*.{ts,yml}' *.md",
     "format": "prettier --write '{src,.github}/**/*.{ts,yml}' *.md",
@@ -34,6 +35,12 @@
       "GitHub": "https://github.com/AndreMiras/laboral-kutxa.js"
     }
   },
+  "nyc": {
+    "reporter": [
+      "html",
+      "text"
+    ]
+  },
   "devDependencies": {
     "@types/chai": "^4.3.5",
     "@types/chai-as-promised": "^7.1.5",
@@ -41,10 +48,13 @@
     "@types/nock": "^11.1.0",
     "@types/node-fetch": "^2.6.4",
     "@types/sinon": "^10.0.16",
+    "canvas": "^2.11.2",
     "chai": "^4.3.8",
     "chai-as-promised": "^7.1.1",
+    "jsdom-global": "^3.0.2",
     "mocha": "^10.2.0",
     "nock": "^13.3.3",
+    "nyc": "^15.1.0",
     "prettier": "^3.0.3",
     "sinon": "^15.2.0",
     "ts-node": "^10.9.1",
