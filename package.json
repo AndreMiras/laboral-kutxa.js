@@ -8,6 +8,7 @@
     "test": "mocha -r ts-node/register src/*.test.ts",
     "test:debug": "node --inspect-brk ./node_modules/.bin/mocha -r ts-node/register src/*.test.ts",
     "test:coverage": "nyc mocha -r ts-node/register -r jsdom-global/register src/*.test.ts",
+    "test:coveralls": "npm run test:coverage && coveralls < coverage/lcov.info",
     "build": "tsc",
     "lint": "prettier --check '{src,.github}/**/*.{ts,yml}' *.md",
     "format": "prettier --write '{src,.github}/**/*.{ts,yml}' *.md",
@@ -38,6 +39,7 @@
   "nyc": {
     "reporter": [
       "html",
+      "lcov",
       "text"
     ]
   },
@@ -51,6 +53,7 @@
     "canvas": "^2.11.2",
     "chai": "^4.3.8",
     "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.1.1",
     "jsdom-global": "^3.0.2",
     "mocha": "^10.2.0",
     "nock": "^13.3.3",

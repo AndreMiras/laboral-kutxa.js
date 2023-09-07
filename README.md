@@ -1,6 +1,7 @@
 # laboral-kutxa.js
 
 [![Tests](https://github.com/AndreMiras/laboral-kutxa.js/workflows/Tests/badge.svg)](https://github.com/AndreMiras/laboral-kutxa.js/actions/workflows/tests.yml)
+[![Coverage Status](https://coveralls.io/repos/github/AndreMiras/laboral-kutxa.js/badge.svg?branch=main)](https://coveralls.io/github/AndreMiras/laboral-kutxa.js?branch=main)
 [![Documentation](https://github.com/AndreMiras/laboral-kutxa.js/workflows/Documentation/badge.svg)](https://github.com/AndreMiras/laboral-kutxa.js/actions/workflows/documentation.yml)
 [![npm version](https://badge.fury.io/js/laboral-kutxa.svg)](https://badge.fury.io/js/laboral-kutxa)
 
