@@ -4,11 +4,16 @@
   "description": "Unofficial Laboral Kutxa JS library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "laboral-kutxa": "dist/cli.js"
+  },
   "scripts": {
     "test": "mocha -r ts-node/register src/*.test.ts",
     "test:debug": "node --inspect-brk ./node_modules/.bin/mocha -r ts-node/register src/*.test.ts",
     "test:coverage": "nyc mocha -r ts-node/register -r jsdom-global/register src/*.test.ts",
     "test:coveralls": "npm run test:coverage && coveralls < coverage/lcov.info",
+    "cli": "ts-node src/cli.ts",
+    "cli:inspect": "node --inspect --require ts-node/register src/cli.ts",
     "build": "tsc",
     "lint": "prettier --check '{src,.github}/**/*.{ts,yml}' *.md",
     "format": "prettier --write '{src,.github}/**/*.{ts,yml}' *.md",
@@ -49,6 +54,8 @@
     "@types/mocha": "^10.0.1",
     "@types/nock": "^11.1.0",
     "@types/node-fetch": "^2.6.4",
+    "@types/proxyquire": "^1.3.29",
+    "@types/read": "^0.0.29",
     "@types/sinon": "^10.0.16",
     "@types/sinon-chai": "^3.2.9",
     "canvas": "^2.11.2",
@@ -60,6 +67,7 @@
     "nock": "^13.3.3",
     "nyc": "^15.1.0",
     "prettier": "^3.0.3",
+    "proxyquire": "^2.1.3",
     "sinon": "^15.2.0",
     "sinon-chai": "^3.7.0",
     "ts-node": "^10.9.1",
@@ -67,6 +75,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "read": "^1.0.7"
   }
 }

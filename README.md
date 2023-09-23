@@ -13,7 +13,7 @@ Unofficial Laboral Kutxa JS library
 npm install laboral-kutxa
 ```
 
-## Usage
+## Library Usage
 
 Reading through the `misProductos` list:
 
@@ -54,4 +54,12 @@ Output:
   currentAccount: { cantidad: 1234.56, moneda: 'EUR' },
   financing: { cantidad: 123456.78, moneda: 'EUR' }
 }
+```
+
+## CLI Usage
+
+It's also possible to consume the CLI directly to access the account.
+
+```sh
+npx laboral-kutxa --balance
 ```

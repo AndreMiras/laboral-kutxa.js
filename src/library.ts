@@ -1,6 +1,6 @@
 import assert from "assert";
 import fetch, { Response } from "node-fetch";
-import { API_URL } from "./constants";
+import { API_URL } from "./index";
 import { LoginResponse, MyProductsResponse, Product } from "./types";
 
 const handleStatusCode = async (response: Response) => {
